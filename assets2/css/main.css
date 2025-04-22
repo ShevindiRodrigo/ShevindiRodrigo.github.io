@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2825,6 +2825,18 @@ input, select, textarea {
 				}
 
 		}
+
+		body.is-touch .tiles article .content {
+			max-height: 0;
+			opacity: 0;
+			transition: max-height 0.5s ease, opacity 0.5s ease;
+		}
+		
+		body.is-touch .tiles article.touched .content {
+			max-height: 15em;
+			opacity: 1;
+		}
+		
 
 /* Header */
 
